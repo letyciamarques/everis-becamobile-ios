@@ -135,13 +135,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b13-Nz-nT7">
-                                        <rect key="frame" x="21" y="446" width="356" height="227"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfi-N2-jc4">
                                         <rect key="frame" x="21" y="8" width="72" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,8 +158,27 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFs-n4-ghN">
+                                        <rect key="frame" x="24" y="623" width="366" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xFq-Oe-hdk"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b13-Nz-nT7">
+                                        <rect key="frame" x="29" y="446" width="356" height="164"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aFs-n4-ghN" firstAttribute="leading" secondItem="ark-NC-4OG" secondAttribute="leading" constant="24" id="Rc1-k6-UWd"/>
+                                    <constraint firstAttribute="trailing" secondItem="aFs-n4-ghN" secondAttribute="trailing" constant="24" id="eLc-Rv-98P"/>
+                                    <constraint firstAttribute="bottom" secondItem="aFs-n4-ghN" secondAttribute="bottom" constant="63" id="uVz-NI-1uK"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7n-dg-ANv"/>
@@ -180,6 +192,7 @@
                     </view>
                     <connections>
                         <outlet property="imagemDoFilme" destination="0eN-UL-CdX" id="eLr-lE-Iqn"/>
+                        <outlet property="novaView" destination="aFs-n4-ghN" id="bKb-hZ-vPy"/>
                         <outlet property="textoLancamento" destination="R4E-Ts-cot" id="UrW-9n-IbF"/>
                         <outlet property="textoSinopse" destination="b13-Nz-nT7" id="eEK-wf-zsz"/>
                         <outlet property="tituloFilme" destination="H7R-Ld-G7V" id="ZIm-US-UNf"/>

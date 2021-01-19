@@ -15,6 +15,7 @@ class DetalhesDoFilmeViewController: UIViewController {
     @IBOutlet weak var imagemDoFilme: UIImageView!
     @IBOutlet weak var textoSinopse: UILabel!
     @IBOutlet weak var textoLancamento: UILabel!
+    @IBOutlet weak var novaView: UIView!
     
     
     // MARK: IBAction
@@ -24,6 +25,19 @@ class DetalhesDoFilmeViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // MARK: - Accessibility
+    
+    func setupAccessibility() {
+        tituloFilme.accessibilityTraits = .header
+        
+        novaView.isAccessibilityElement = true
+        novaView.accessibilityLabel = "Conhecendo o elenco"
+        novaView.accessibilityTraits = .button
+        novaView.accessibilityHint = "Dê dois cliques para ativar"
+            
+    }
+              
+    
     //MARK: Variveis
     let detalheDoMeuFilme:FilmesAPI = FilmesAPI("fda3fa048b5dd1721be8d5512626b16a")
     var meuFilme:[String:Any]? = nil
@@ -31,6 +45,7 @@ class DetalhesDoFilmeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mostrarFilme()
+        setupAccessibility()
     }
     
     //MARK: Metodos

@@ -20,6 +20,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         filmesDisponiveis.dataSource = self
         filmesDisponiveis.delegate = self
         mostraImagem()
+  
     }
     
     
